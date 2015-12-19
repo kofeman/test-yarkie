@@ -1,0 +1,60 @@
+/*
+
+bem code style for stylus:
+
+.block1
+
+	&__element1
+		color red
+
+		&_modifier1
+			color lime
+
+*/
+@import "helpers/clear.css";
+body {
+  font-family: noto;
+  min-width: 320px;
+}
+.wrapper {
+  width: 310px;
+  margin: 0 auto;
+}
+.header {
+  padding: 40px 0 25px;
+}
+.header-title {
+  font-family: 'Playfair Display', serif;
+  color: #010101;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.header-title__text {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 16px;
+  text-transform: uppercase;
+}
+.header-title__text:after {
+  width: 420px;
+  height: 2px;
+  background: #000;
+  content: '';
+  display: inline-block;
+  vertical-align: bottom;
+}
+@media (min-width: 480px) {
+  .wrapper {
+    width: 440px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 700px;
+  }
+}

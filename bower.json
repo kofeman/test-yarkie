@@ -1,0 +1,17 @@
+{
+  "name": "test yarkie.ru",
+  "version": "0.1.0",
+  "authors": [
+    "Nikolay Starikov <nickolyastar@gmail.com>"
+  ],
+  "description": "test work",
+  "keywords": [
+    "jade",
+    "stylus",
+    "bem"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "html5shiv": "~3.7.3"
+  }
+}

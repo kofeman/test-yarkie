@@ -1,0 +1,52 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing : border-box;
+}
+
+html,body
+{
+	height: 100%;
+}
+
+
+a
+{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+a img
+{
+	border: none;
+}
+
+h1,h2,h3,h4
+{
+	font-weight: normal;
+}
+
+input, select, textarea{
+	outline: none;
+}
+
+.browsehappy{
+	padding: 20px 0;
+	text-align: center;
+	background: #eee;
+	border-bottom: 2px solid red;
+}
+
+
+button
+{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
