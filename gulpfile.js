@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	browserSync = require("browser-sync"),
 	imagemin = require('gulp-imagemin'),
 	autoprefixer = require('gulp-autoprefixer'),
+	prettify = require('gulp-html-prettify'),
 	reload = browserSync.reload;
 
 var config = {
@@ -28,10 +29,9 @@ gulp.task('clean', function () {
 
 gulp.task('jade', function() {
 	gulp.src(['app/jade/*.jade', '!app/jade/_*.jade'])
-		.pipe(jade({
-			pretty: true
-		}))
+		.pipe(jade())
 		.on('error', console.log)
+		.pipe(prettify({indent_char: ' ', indent_size: 2}))
 		.pipe(gulp.dest('dist'))
 		.pipe(reload({stream: true}));
 });
@@ -89,7 +89,7 @@ gulp.task('watch', function() {
 
 //build task
 
-gulp.task('build', [ 'jade', 'stylus', 'transfer-files'], function() {});
+gulp.task('build', [ 'jade', 'stylus', 'transfer-files', 'images'], function() {});
 
 //default task
 

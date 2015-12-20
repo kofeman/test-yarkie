@@ -1,33 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>День в фото</title><!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <p class="browsehappy">
-      Вы используете <b>устаревший</b> браузер. <br>
-      Пожалуйста, <a href="http://browsehappy.com/">обновите свой браузер</a>, чтобы улучшить отображение сайта
-    </p><![endif]-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=latin,cyrillic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&amp;subset=latin,cyrillic">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- start header-->
-                  <header class="header">
-                                <h1 class="header-title"><span class="header-title__text">День в фото</span>
-                                </h1>
-                  </header>
-      <!-- end header-->
-      <!-- start content-->
-      <div class="content"></div>
-      <!-- end content-->
-      <!-- start footer-->
-      <footer></footer>
-      <!-- end footer-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>День в фото</title>
+  <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=latin,cyrillic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&amp;subset=latin,cyrillic">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+  <div class="wrapper">
+    <!-- start header-->
+    <header class="header">
+      <h1 class="header-title"><span class="header-title__text">День в фото</span></h1>
+    </header>
+    <!-- end header-->
+    <!-- start content-->
+    <div class="content">
+      <!--main photo-->
+      <figure class="main-photo">
+        <img src="images/main-photo.jpg" class="main-photo__image" alt="">
+        <figcaption class="main-photo__caption">
+          <p class="main-photo__date"><span class="main-photo__day">21</span><span class="main-photo__month">сентября</span>
+          </p>
+        </figcaption>
+        <p class="main-photo__description main-photo__description_sm-hidden_md-hidden"><span class="main-photo__text">Мельницы маленькой деревушки Brandmill близи курортного австрийского города Mayerhoffen.</span><span class="main-photo__author">Фото: Reuters</span>
+        </p>
+      </figure>
+      <!--end main photo-->
+      <!--photo list-->
+      <div class="photos">
+        <a href="#" class="banner-adidas banner-adidas_sm-hidden">
+          <img src="images/banner-adidas.jpg" class="banner-adidas__logo" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo1.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo2.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo3.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo4.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo5.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo6.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="banner-web banner-web_md-hidden_lg-hidden">
+          <img src="images/web-icon.png" class="banner-web__logo" alt=""><span class="banner-web__description"><span class="banner-web__about-banner">Рекламный тизер</span><span class="banner-web__title">Театральная паутина</span><span class="banner-web__text">Открытие новых сервисных центров немекого автопрома</span></span>
+        </a><a href="#" class="photo-item-date"><span class="photo-item-date__wrapper"><span class="photo-item-date__day">20</span><span class="photo-item-date__month">сентября</span></span></a>
+        <a href="#" class="photo-item">
+          <img src="images/photo7.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo8.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo9.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo10.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo11.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo12.jpg" class="photo-item__image" alt="">
+        </a><a href="#" class="photo-item-date"><span class="photo-item-date__wrapper"><span class="photo-item-date__day">19</span><span class="photo-item-date__month">сентября</span></span></a>
+        <a href="#" class="photo-item">
+          <img src="images/photo13.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo14.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo15.jpg" class="photo-item__image" alt="">
+        </a>
+        <div class="banner-cola banner-cola_sm-hidden_md-hidden">
+          <img src="images/banner-cola.jpg" class="banner-cola__logo" alt="">
+        </div>
+        <a href="#" class="photo-item">
+          <img src="images/photo16.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item">
+          <img src="images/photo17.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item photo-item_sm-hidden">
+          <img src="images/photo18.jpg" class="photo-item__image" alt="">
+        </a><a href="#" class="photo-item-date photo-item-date_sm-hidden"><span class="photo-item-date__wrapper"><span class="photo-item-date__day">18</span><span class="photo-item-date__month">сентября</span></span></a>
+        <a href="#" class="photo-item photo-item_sm-hidden">
+          <img src="images/photo19.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item photo-item_sm-hidden">
+          <img src="images/photo20.jpg" class="photo-item__image" alt="">
+        </a>
+        <a href="#" class="photo-item photo-item_sm-hidden">
+          <img src="images/photo21.jpg" class="photo-item__image" alt="">
+        </a><a href="#" class="photo-item-date photo-item-date_sm-hidden"><span class="photo-item-date__wrapper"><span class="photo-item-date__day">17</span><span class="photo-item-date__month">сентября</span></span></a>
+        <a href="#" class="photo-item photo-item_sm-hidden">
+          <img src="images/photo22.jpg" class="photo-item__image" alt="">
+        </a>
+      </div>
+      <!--end photo list-->
     </div>
-  </body>
+    <!-- end content-->
+    <!-- start footer-->
+    <footer class="footer">
+      <div class="navigation"><span class="navigation__description navigation__description_sm-hidden">Страницы:</span>
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_active">1</a>
+          </li>
+          <li class="navigation__item"><a href="#" class="navigation__link">2</a>
+          </li>
+          <li class="navigation__item"><a href="#" class="navigation__link">3</a>
+          </li>
+          <li class="navigation__item"><a href="#" class="navigation__link">4</a>
+          </li>
+          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_next">Следующая</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end footer-->
+  </div>
+</body>
+
 </html>

@@ -1,79 +1,440 @@
-/*
 
-bem code style for stylus:
 
-.block1
+//bem code style for stylus:
+//
+//.block1
+//
+//	&__element1
+//		color red
+//
+//		&_modifier1
+//			color lime
+//
 
-	&__element1
-		color red
+/* clear styles */
 
-		&_modifier1
-			color lime
+@import 'helpers/clear'
+@import 'helpers/mixins'
 
-*/
-
-@import "helpers/clear.css"
 
 //variables
 
 NotoSerif = 'Noto Serif', serif;
 PlayfairDisplay = 'Playfair Display', serif;
+md = 480px
+lg = 768px
 
-//common styles
+/* common styles */
 
-body
-	font-family noto
+.body
+	font-family NotoSerif
 	min-width: 320px
 
 .wrapper
-	width: 310px
+	width: 320px
 	margin: 0 auto
 
-//header
+
+[class*= 'sm-hidden']
+	display none
+
+/* header */
 
 .header
-	padding: 40px 0 25px
+	padding: 25px 5px 15px
+
+	@media (min-width: md)
+		padding: 40px 20px 25px
+
+	@media (min-width: lg)
+		padding: 40px 34px 25px
 
 .header-title
 	font-family PlayfairDisplay
 	color  #010101
-	font-size 40px
+	font-size 26px
 	font-weight 400
-	line-height 18px
+	line-height: 1em
 	max-width: 100%
 	overflow: hidden
 	text-transform: uppercase
 	white-space nowrap
 
+	@media (min-width: md)
+		font-size 40px
+
 	&__text
 		display: inline-block
 		vertical-align: bottom
-		margin-right: 16px
 		text-transform: uppercase
 
 		&:after
-			width 420px
+			width 820px
+			margin-left: 15px
 			height 2px
 			background: #000000
 			content ''
 			display: inline-block
 			vertical-align: bottom
+			margin-bottom: 6px
 
-//content
-
-
-
-//footer
+			@media (min-width: md)
+				margin-bottom: 4px
 
 
 
-//responsive
+/* content */
+
+.main-photo
+	margin-bottom: 5px
+	margin-left 5px
+	position: relative
+	overflow: hidden
+	margin-right: 5px
+
+	@media (min-width: md)
+		margin-left: 20px
+		margin-bottom: 10px
+		margin-right: 20px
+
+	@media (min-width: lg)
+		margin-left: 34px
+		margin-bottom: 16px
+		margin-right: 34px
+
+		&:after
+			content url("../images/bottom-angle.png")
+			width: 20px
+			//overflow: hidden
+			height: 10px
+			top: 438px
+			left: 50%
+			margin-left: -10px
+			display: block
+			position: absolute
+
+	&__image
+		height: 202px
+		display: block
+		width: 100%
+
+		@media (min-width: md)
+			height: 286px
+
+		@media (min-width: lg)
+			height: 455px
+
+	&__caption
+		width 80px
+		height 53px
+		position: absolute
+		top 6px
+		left 6px
+		text-align: center
+		v-middle()
+		background url('../images/caption-bg.png') repeat /* for ie 8 */
+		background rgba(255,255,255,0.8)
+
+		@media (min-width: md)
+			top 10px
+			left: 10px
+
+		@media (min-width: lg)
+			width: 160px
+			height: 104px
+			left: 20px
+			top: 20px
+
+	&__date
+		display: inline-block
+		vertical-align: middle
+		margin-left: -2px
+
+	&__day
+		display: block
+		color  #000000
+		font-size 18px
+		font-weight 400
+		line-height 20px
+
+		@media (min-width: lg)
+			font-size 36px
+			font-weight 400
+			line-height 24px
+
+	&__month
+		color  #000000
+		font-size 14px
+		font-weight 400
+		line-height 18px
+		display: inline-block
+
+		@media (min-width: lg)
+			font-size 18px
+			font-weight 400
+			line-height 24px
+			margin-top: 6px
+			position: relative
+
+			&:after
+				position: absolute
+				content url("../images/angle1.png")
+				right: -18px
+				top: -33px
+
+	&__description
+		margin-top: 13px
+		width: 100%
+
+	&__text
+		color  #000000
+		font-size 13px
+		font-weight 700
+		line-height 18px
+		white-space nowrap
+		display: block
+
+	&__author
+		color: #acacac
+		font-size 13px
+		font-weight 400
+		line-height 18px
+		display: block
+
+.photos
+	overflow: hidden
+	padding-bottom: 18px
+	padding-left: 5px
+
+	@media (min-width: md)
+		padding-left 20px
+
+	@media (min-width: lg)
+		padding-left 34px
+
+.photo-item
+	float: left
+	width: 73px
+	height: 48px
+	margin: 0 5.5px 5px 0
+	overflow: hidden
+
+	@media (min-width: md)
+		width 80px
+		height 53px
+		margin 0 10px 10px 0
+
+	@media (min-width: lg)
+			width 160px
+			height 104px
+			margin 0 20px 20px 0
+
+
+	&__image
+		width: 100%
+		display: block
+
+.photo-item-date
+	v-middle()
+	text-align: center
+	float: left
+	width: 73px
+	height: 48px
+	margin: 0 5.5px 5px 0
+
+	@media (min-width: md)
+		width 80px
+		height 53px
+		margin 0 10px 10px 0
+
+	@media (min-width: lg)
+			width 160px
+			height 104px
+			margin 0 20px 20px 0
+
+	&__wrapper
+		display: inline-block
+		vertical-align: middle
+		width: 99%
+
+	&__day
+		color  #000000
+		font-size 18px
+		font-weight 400
+		line-height 24px
+		display: block
+		margin-bottom: -2px
+
+		@media (min-width: lg)
+			font-size 36px
+			line-height 1em
+
+
+	&__month
+		color  #000000
+		font-size 14px
+		font-weight 400
+		line-height 18px
+		position: relative
+		display: inline-block
+
+		&:after
+			position: absolute
+			content url("../images/angle1.png")
+			right: 3px
+			top: -23px
+
+		@media (min-width: lg)
+			font-size 18px
+			line-height 24px
+
+			&:after
+				right: -20px
+				top: -33px
+
+
+.banner-web
+	margin: 5px 5px 10px 0
+	width: 310px
+	float: left
+	overflow: hidden
+	height: 80px
+
+	&__logo
+		width: 100px
+		height: 80px
+		float: left
+
+	&__description
+		margin-left: 100px
+		display: block
+		height: 100%
+		background: #fbf6e8
+		padding: 5px 0 0 19px
+
+	&__about-banner
+		color  #bebebe
+		font-size 10px
+		font-weight 700
+		margin-bottom: 3px
+		display: block
+
+	&__title
+		display: block
+		color  #000000
+		font-size 13px
+		font-weight 700
+		line-height 17px
+
+	&__text
+		display: block
+		color  #000000
+		font-size 12px
+		font-weight 400
+		line-height 17px
+
+.banner-adidas
+	margin: 0 20px 10px 0
+	width: 160px
+	overflow: hidden
+	height: 243px
+	f-right()
+
+	@media (min-width: lg)
+		margin-right: 34px
+		height: 238px
+
+
+	&__logo
+		display: block
+		width: 100%
+
+.banner-cola
+	margin: 0 34px 10px 0
+	width: 160px
+	overflow: hidden
+	height: 238px
+	f-right()
+
+	&__logo
+		display: block
+		width: 100%
+
+/* footer */
+
+.footer
+	padding: 0 5px 21px
+
+	@media (min-width: md)
+		padding 0 20px 21px
+
+	@media (min-width: lg)
+		padding 0 34px 21px
+		margin-top: -7px
+
+.navigation
+	&__list
+		display: inline-block
+		vertical-align: middle
+
+	&__item
+		display: inline-block
+		vertical-align: middle
+		text-align: center
+
+	&__link
+		display: block
+		line-height 34px
+		color  #000000
+		font-size 13px
+		font-weight 400
+		width 29px
+
+		@media (min-width: md)
+			width 34px
+			margin-right: 6px
+
+		&_active
+			font-weight: 700
+			width 34px
+			background url("../images/f-round.png") no-repeat
+
+		&_next
+			margin-left: 18px
+			width auto
+
+	&__description
+		vertical-align: middle
+		margin-right: 17px
+		color: #838383;
+		font-size: 13px;
+
+
+/* responsive */
 
 @media (min-width: 480px)
 	.wrapper
-		width: 440px
+		width: 480px
+
+	[class*= 'sm-hidden']
+		display inline-block
+
+	[class*= 'lg-hidden']
+		display inline-block
+
+	[class*= 'md-hidden']
+		display none
 
 
 @media (min-width: 768px)
 	.wrapper
-		width: 700px
+		width: 768px
+
+	[class*= 'sm-hidden']
+		display inline-block
+
+	[class*= 'md-hidden']
+		display inline-block
+
+	[class*= 'lg-hidden']
+		display none

@@ -1,0 +1,21 @@
+include bemto/bemto
+
+// start footer
+
++b('footer').footer
+	+b.navigation
+		+e('span').description_sm-hidden Страницы:
+		+e('ul').list
+			+e.item
+				+e.link_active(href='#') 1
+			+e.item
+				+e.link(href='#') 2
+			+e.item
+				+e.link(href='#') 3
+			+e.item
+				+e.link(href='#') 4
+			+e.item
+				+e.link_next(href='#') Следующая
+
+
+// end footer

@@ -1,0 +1,98 @@
+include bemto/bemto
+
+// start content
+
+.content
+	//main photo
+
+	+b('figure').main-photo
+		+e.image(src='images/main-photo.jpg')
+		+e('figcaption').caption
+			+e('p').date
+				+e.day 21
+				+e.month сентября
+		+e('p').description_sm-hidden_md-hidden
+			+e.text Мельницы маленькой деревушки Brandmill близи курортного австрийского города Mayerhoffen.
+			+e.author Фото: Reuters
+
+	//end main photo
+
+	//photo list
+
+	+b.photos
+		+b.banner-adidas_sm-hidden(href='#')
+			+e.logo(src='images/banner-adidas.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo1.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo2.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo3.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo4.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo5.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo6.jpg')
+		+b.banner-web_md-hidden_lg-hidden(href='#')
+			+e.logo(src='images/web-icon.png')
+			+e.description
+				+e.about-banner Рекламный тизер
+				+e.title Театральная паутина
+				+e.text Открытие новых сервисных центров немекого автопрома
+		+b.photo-item-date(href='#')
+			+e.wrapper
+				+e.day 20
+				+e.month сентября
+		+b.photo-item(href='#')
+			+e.image(src='images/photo7.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo8.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo9.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo10.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo11.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo12.jpg')
+		+b.photo-item-date(href='#')
+			+e.wrapper
+				+e.day 19
+				+e.month сентября
+		+b.photo-item(href='#')
+			+e.image(src='images/photo13.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo14.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo15.jpg')
+		+b.banner-cola_sm-hidden_md-hidden
+			+e.logo(src='images/banner-cola.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo16.jpg')
+		+b.photo-item(href='#')
+			+e.image(src='images/photo17.jpg')
+		+b.photo-item_sm-hidden(href='#')
+			+e.image(src='images/photo18.jpg')
+		+b.photo-item-date_sm-hidden(href='#')
+			+e.wrapper
+				+e.day 18
+				+e.month сентября
+		+b.photo-item_sm-hidden(href='#')
+			+e.image(src='images/photo19.jpg')
+		+b.photo-item_sm-hidden(href='#')
+			+e.image(src='images/photo20.jpg')
+		+b.photo-item_sm-hidden(href='#')
+			+e.image(src='images/photo21.jpg')
+		+b.photo-item-date_sm-hidden(href='#')
+			+e.wrapper
+				+e.day 17
+				+e.month сентября
+		+b.photo-item_sm-hidden(href='#')
+			+e.image(src='images/photo22.jpg')
+
+
+
+	//end photo list
+
+// end content
